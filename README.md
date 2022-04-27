@@ -28,7 +28,7 @@ After adding customers and products user can generate bills to the particular cu
 7. Sweet Alert2
 
 # Demo
-For Live Demo, Please click here: <a href="https://new-billing-app.netlify.app/" target="_blank">DEMO</a>
+For Live Demo, Please click here: <a href="https://billing-app-lohit.netlify.app/" target="_blank">DEMO</a>
 
 
 
