@@ -18,8 +18,10 @@ const ReadOnlyRow = ({ prod, i, handleEditClick }) => {
       <td>{prod.name}</td>
       <td>{prod.price}</td>
       <td align="center">
-      <Button size='sm' variant="warning" style={{marginRight:'20px'}} onClick={(e) => handleEditClick(e, prod)}><FiEdit size="20px" /></Button>{" "}
-      <Button size='sm' variant="danger" onClick={() => handleRemove(prod._id)}><RiDeleteBin6Line size="20px" /></Button>
+        <Button size='sm' variant="warning" onClick={(e) => handleEditClick(e, prod)}><FiEdit size="20px" /></Button>{" "}
+      </td>
+      <td align="center">
+        <Button size='sm' variant="danger" onClick={() => handleRemove(prod._id)}><RiDeleteBin6Line size="20px" /></Button>
       </td>
     </tr>
   );

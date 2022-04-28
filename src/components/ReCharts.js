@@ -27,9 +27,9 @@ const ReCharts = props => {
                 if (found) found.total += cur.total;
                 else accumulator.push(cur);
                 return accumulator;
-              }, []);
+              },[]);
               
-              console.log("out",output)
+              // console.log("out",output)
         
     // const data1 = {
         //     date:date
@@ -39,21 +39,22 @@ const ReCharts = props => {
     
    
   return (
-    <BarChart
-        width={500}
-        height={300}
-        data={output.slice(-7).reverse()}
-        margin={{
-          top: 30, right: 30, left: 20, bottom: 5,
-        }}
-      >
-        <XAxis dataKey="date" angle={-30} position='start' />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        {/* <Cell/> */}
-        <Bar dataKey="total" barSize={20} fill="#8884d8" />
-      </BarChart>
+    <ResponsiveContainer width='95%' height={400}>
+      <BarChart
+          data={output.slice(-7).reverse()}
+          margin={{
+            top: 30, right: 30, left: 20, bottom: 5,
+          }}
+        >
+          <CartesianGrid stroke="#eee" strokeDasharray="2 2"/>
+          <XAxis dataKey="date" angle={-30} position='start' />
+          <YAxis dataKey="total"/>
+          <Tooltip />
+          <Legend />
+          <Cell/>
+          <Bar dataKey="total" barSize={40} fill="#8884d8" />
+        </BarChart>
+      </ResponsiveContainer>
   )
 }
 

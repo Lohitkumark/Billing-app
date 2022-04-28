@@ -109,11 +109,12 @@ const CustomerList = (props) => {
                 <thead>
                   <tr align='center'>
                     <th style={{ width: "3rem" }} >#</th>
-                    <th style={{ width: "6rem" }} >Date</th>
+                    <th style={{ width: "10rem" }} >Date</th>
                     <th style={{ width: "10rem" }} >Name</th>
                     <th style={{ width: "10rem" }}>Email</th>
                     <th style={{ width: "10rem" }}>Mobile No</th>
-                    <th style={{ width: "7rem" }}>Actions</th>
+                    <th style={{ width: "8rem" }}>Edit</th>
+                    <th style={{ width: "8rem" }}>Delete</th>
                   </tr>
                 </thead>
                 <tbody>

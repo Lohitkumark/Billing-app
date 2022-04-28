@@ -13,10 +13,10 @@ const CustomerContainer = () => {
    
     return (
         <div>
-            <Container className="mt-4">
+            <Container fluid className="mt-4">
             <Row>
                 <Col md={8}>
-                        <Card className='bg-light text-dark mb-3'>
+                        <Card className='bg-light text-dark mb-3 mt-3'>
                             <Card.Header>
                             {products.data.length === 0 ? (
                                 <div display='2'>
@@ -33,12 +33,12 @@ const CustomerContainer = () => {
                         )}
                 </Col>
                 <Col md={4}>
-                <Card className='bg-light text-dark mb-3'>
+                <Card className='bg-light text-dark mb-3 mt-3'>
                     <Card.Header>
                         <h2>Add Product</h2>
                     </Card.Header>
                 </Card>
-                <Card className='bg-light text-dark mb-3'>
+                <Card className='bg-light text-dark mb-3 mt-3'>
                 <Card.Body>
                     <AddProduct/>
                 </Card.Body>

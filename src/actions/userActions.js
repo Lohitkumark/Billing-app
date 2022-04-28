@@ -7,9 +7,9 @@ export const startPostRegister = (formData, props) =>{
         axios.post('/users/register', formData)
             .then((response)=>{
                 const result=response.data
-                // console.log(result);
-                if(result.hasOwnProperty('errmsg')){
-                    Swal.fire(result.errmsg)
+                // console.log('res',result);
+                if(result.hasOwnProperty('errors')){
+                    Swal.fire(result.message)
                 }else{
                     Swal.fire('successfully registered')
                     dispatch(addUser(result))
@@ -29,7 +29,7 @@ export const startPostLogin = (formData, props) => {
             .then((response)=>{
                 const result= response.data
                 if(result.hasOwnProperty('errors')){
-                    Swal.fire(result.errors)
+                    Swal.fire(result.message)
                 }else{
                     Swal.fire('successfully logged in')
                     dispatch(loginUser(result))

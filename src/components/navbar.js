@@ -53,7 +53,7 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Navbar collapseOnSelect expand="sm" bg="primary" variant="dark">
+      <Navbar collapseOnSelect={true} expand="lg" bg="primary" variant="dark">
         <Container fluid>
           <Navbar.Brand>
             <h2>{userLoggedIn ? `${businessName}` : "Welcome To The Billing App"}</h2>
@@ -65,22 +65,22 @@ const NavBar = (props) => {
               {userLoggedIn ? (
                 <>
                   <Nav.Item>
-                    <Nav.Link as={Link} to={"/Dashboard"}>
+                    <Nav.Link eventKey="1" as={Link} to={"/Dashboard"}>
                       Dashboard
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link as={Link} to={"/customers"}>
+                    <Nav.Link eventKey="2" as={Link} to={"/customers"}>
                       Customers
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link as={Link} to={"/products"}>
+                    <Nav.Link eventKey="3" as={Link} to={"/products"}>
                       Products
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link as={Link} to={"/bills"}>
+                    <Nav.Link eventKey="4" as={Link} to={"/bills"}>
                       Bills
                     </Nav.Link>
                   </Nav.Item>
@@ -116,16 +116,16 @@ const NavBar = (props) => {
                 </>
               ) : (
                 <>
-                  <Nav.Link as={Link} to={"/"}>
+                  <Nav.Link eventKey="7" as={Link} to={"/"}>
                       Home
                   </Nav.Link>
                   <Nav.Item>
-                    <Nav.Link as={Link} to={"/Register"}>
+                    <Nav.Link eventKey="8" as={Link} to={"/Register"}>
                       Register
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link as={Link} to={"/Login"}>
+                    <Nav.Link eventKey="9" as={Link} to={"/Login"}>
                       Login
                     </Nav.Link>
                   </Nav.Item>
@@ -144,7 +144,7 @@ const NavBar = (props) => {
           return <LoginContainer {...props} handleAuth={handleAuth} />;
         }}
       />
-      <PrivateRoute path="/Dashboard" component={Dashboard} exact={true} />
+      <PrivateRoute path="/Dashboard" component={Dashboard} />
       <PrivateRoute path="/customers" component={CustomersContainer} />
       <PrivateRoute path="/products" component={ProductsContainer} />
       <PrivateRoute path="/bills" component={BillsContainer} />

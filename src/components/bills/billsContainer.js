@@ -12,10 +12,10 @@ const BillsContainer = (props) => {
     
     return (
         <div>
-            <Container className="mt-4">
+            <Container fluid className="mt-4">
                 <Row>
                     <Col md={8}>
-                            <Card className='bg-light text-dark mb-3'>
+                            <Card className='bg-light text-dark mb-3 mt-3'>
                                 <Card.Header>
                                     {bills.data.length === 0 ? (
                                         <div display='2'>
@@ -32,12 +32,12 @@ const BillsContainer = (props) => {
                             )}
                     </Col>
                     <Col md={4}>
-                        <Card  className="bg-light text-dark mb-3">
+                        <Card  className="bg-light text-dark mb-3 mt-3">
                             <Card.Header>
                                 <h2>Add Bills</h2>
                             </Card.Header>
                         </Card>
-                        <Card className='bg-light text-dark mb-3'>
+                        <Card className='bg-light text-dark mb-3 mt-3'>
                             <Card.Body>
                                 <AddBill/>
                             </Card.Body>

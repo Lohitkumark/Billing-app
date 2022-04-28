@@ -9,12 +9,12 @@ const LoginContainer = (props)=>{
     return (
         <Container className='col-md-4 mt-4'>
             <div>
-                <Card style={{ width: '25rem'}} className='bg-light text-dark mb-3'>
+                <Card className='bg-light text-dark mb-3'>
                     <Card.Body>
                         <h2>Login</h2>
                     </Card.Body>
                 </Card>
-                <Card style={{ width: '25rem'}} className='bg-light text-dark mb-3'>
+                <Card className='bg-light text-dark mb-3'>
                     <Card.Body>
                         <LoginForm {...props}/>
                         <div className='mt-4'>

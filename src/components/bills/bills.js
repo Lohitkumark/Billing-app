@@ -75,7 +75,9 @@ const Bills =(props) =>{
             <td>{cName}</td>
             <td>{total}</td>
             <td>
-                <Button size='sm' variant='info' style={{marginRight:'20px'}} onClick={() => handleClick(_id)}><BiShow size='20px'/></Button>{' '}
+                <Button size='sm' variant='info' onClick={() => handleClick(_id)}><BiShow size='20px'/></Button>{' '}
+            </td> 
+            <td>  
                 <Button size='sm' variant='danger' onClick={()=>handleRemove(_id)}><RiDeleteBin6Line size="20px" /></Button> 
                 <GenerateBill show={modalShow} onHide={() => setModalShow(false)} lineitems={lineItems} items={items} total={total} id={_id}/>
             </td>

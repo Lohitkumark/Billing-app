@@ -12,7 +12,7 @@ const CustomerContainer = () => {
 
     return (
         <div>
-            <Container className="mt-4">
+            <Container fluid className="mt-4">
             <Row>
             <Col md={8}>
                     <Card className='bg-light text-dark mb-3'>
@@ -32,12 +32,12 @@ const CustomerContainer = () => {
                     )}
             </Col>
                 <Col md={4}>
-                    <Card className='bg-light text-dark mb-3'>
+                    <Card className='bg-light text-dark mb-3 mt-3'>
                         <Card.Header>
                             <h2>Add Customer</h2>
                         </Card.Header>
                     </Card>
-                    <Card className='bg-light text-dark mb-3'>
+                    <Card className='bg-light text-dark mb-3 mt-3'>
                         <Card.Body>
                             <AddCustomer/>
                         </Card.Body>

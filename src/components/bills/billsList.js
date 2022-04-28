@@ -95,7 +95,8 @@ const BillsList = (props) => {
                   <th>Date</th>
                   <th>Customer Name</th>
                   <th>Total</th>
-                  <th>Actions</th>
+                  <th>View</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>

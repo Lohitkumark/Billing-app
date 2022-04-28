@@ -28,10 +28,10 @@ const Dashboard=(props)=>{
     },[bills])
     
     return (
-        <Container className="mt-4">
+        <Container fluid className="mt-4 ">
             <Row style={{textAlign:"center"}} className='mt-5'>
-                <Col>
-                    <Card>
+                <Col mb={3}>
+                    <Card className='mt-2'>
                         <Card.Header>
                             <b>Total Customers</b>
                         </Card.Header>
@@ -41,7 +41,7 @@ const Dashboard=(props)=>{
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className='mt-2'>
                         <Card.Header>
                             <b>Total Products</b>
                         </Card.Header>
@@ -51,7 +51,7 @@ const Dashboard=(props)=>{
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className='mt-2'>
                         <Card.Header>
                             <b>Total Bills</b>
                         </Card.Header>
@@ -60,8 +60,8 @@ const Dashboard=(props)=>{
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
-                    <Card>
+                <Col mb={3}>
+                    <Card className='mt-2'>
                         <Card.Header>
                             <b>Total Income</b>
                         </Card.Header>
@@ -74,8 +74,8 @@ const Dashboard=(props)=>{
                 </Col>
             </Row>
             <Row className="mt-5">
-                <Col>
-                    <Card>
+                <Col mb={3}>
+                    <Card className='mt-2'>
                         <Card.Header style={{textAlign:"center"}} > 
                             <b>Recently Added Customers</b>
                         </Card.Header>
@@ -88,8 +88,8 @@ const Dashboard=(props)=>{
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
-                    <Card>
+                <Col mb={3}>
+                    <Card className='mt-2'>
                         <Card.Header style={{textAlign:"center"}}>
                             <b>Recently Added Products</b>
                         </Card.Header>
@@ -102,8 +102,8 @@ const Dashboard=(props)=>{
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
-                    <Card>
+                <Col mb={3}>
+                    <Card className='mt-2'>
                         <Card.Header style={{textAlign:"center"}}>
                             <b>Recently Added Bills</b>
                         </Card.Header>

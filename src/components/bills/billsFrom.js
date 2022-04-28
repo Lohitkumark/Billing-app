@@ -140,7 +140,7 @@ const BillsForm = (props) => {
             <div key={index} className='md-12'>
               <Row>
                 <Col md={5}>
-                  <select style={{ width: "9rem" }} className='form-control' as='select' required onChange={e => handleAddChange(index, e)} name='product'>  
+                  <select className='form-control' as='select' required onChange={e => handleAddChange(index, e)} name='product'>  
                     <option value=''>-Select Product-</option>
                     {products.data.map((ele)=>{
                       return <option key={ele._id} value={element.product || ele._id}>{ele.name}</option>
@@ -150,10 +150,10 @@ const BillsForm = (props) => {
                   <br/>
                 </Col>
                 <Col md={3}>
-                  <Form.Control style={{ width: "5rem" }} className='form-control' type="number" placeholder='Qty' name="quantity" value={Number(element.quantity) || ''} onChange={e => handleAddChange(index, e)} required/>
+                  <Form.Control className='form-control' type="number" placeholder='Qty' name="quantity" value={Number(element.quantity) || ''} onChange={e => handleAddChange(index, e)} required/>
                   {/* <ErrorMessage name='name' /> */}
                 </Col>
-                <Col md={4}>
+                <Col md={4}className='mt-3'>
                       <Button size='md' variant="danger" onClick={() => removeFormFields(index)}><RiDeleteBin6Line size="20px" /></Button>
                   </Col> 
               </Row>

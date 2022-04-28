@@ -112,7 +112,8 @@ const ProductsList = (props) => {
                     <th style={{ width: "5rem" }} >Date</th>
                     <th style={{ width: "10rem" }} >Name</th>
                     <th style={{ width: "5rem" }} >Price</th>
-                    <th style={{ width: "7rem" }} >Actions</th>
+                    <th style={{ width: "7rem" }} >Edit</th>
+                    <th style={{ width: "7rem" }} >Delete</th>
                   </tr>
                 </thead>
                 <tbody>

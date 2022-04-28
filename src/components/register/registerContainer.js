@@ -7,12 +7,12 @@ import { Link, Route } from "react-router-dom";
 const RegisterContainer =(props) =>{
     return (
         <Container className='col-md-4 mt-4'>
-            <Card style={{ width: '25rem'}} className='bg-light text-dark mb-3'>
+            <Card className='bg-light text-dark mb-3'>
                 <Card.Body>
                     <h2>Register</h2>
                 </Card.Body>
             </Card>
-            <Card style={{ width: '25rem'}} className='bg-light text-dark mb-3'>
+            <Card className='bg-light text-dark mb-3'>
                 <Card.Body>
                     <RegisterForm {...props}/>
                     <div className='mt-4'>

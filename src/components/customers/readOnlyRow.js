@@ -19,9 +19,11 @@ const ReadOnlyRow = ({ cust, i, handleEditClick }) => {
       <td>{cust.email}</td>
       <td>{cust.mobile}</td>
       <td align="center">
-        <Button size='sm' variant="warning" style={{marginRight:'20px'}} onClick={(e) => handleEditClick(e, cust)}>
+        <Button size='sm' variant="warning" onClick={(e) => handleEditClick(e, cust)}>
           <FiEdit size="20px" />
         </Button>
+      </td>
+      <td align="center">
         <Button size='sm' variant="danger" onClick={() => handleRemove(cust._id)}>
           <RiDeleteBin6Line size="20px" />
         </Button>
