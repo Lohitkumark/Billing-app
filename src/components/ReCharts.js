@@ -16,18 +16,18 @@ const ReCharts = props => {
         const result = bills.data.map((ele)=>{
            return {date:ele.date.slice(0,10), total:ele.total}
         })
-        setData(result)
-
-    },[bills])
+        const output = result.reduce((accumulator, cur) => {
+          let date = cur.date;
+          let found = accumulator.find(elem => elem.date == date)
+          if (found) found.total += cur.total;
+          else accumulator.push(cur);
+          return accumulator;
+        },[]);
+        
+        setData(output)
+    },[bills.data])
     
         // console.log('in', data);
-            const output = data.reduce((accumulator, cur) => {
-                let date = cur.date;
-                let found = accumulator.find(elem => elem.date == date)
-                if (found) found.total += cur.total;
-                else accumulator.push(cur);
-                return accumulator;
-              },[]);
               
               // console.log("out",output)
         
@@ -41,7 +41,7 @@ const ReCharts = props => {
   return (
     <ResponsiveContainer width='95%' height={400}>
       <BarChart
-          data={output.slice(-7).reverse()}
+          data={data.slice(-7).reverse()}
           margin={{
             top: 30, right: 30, left: 20, bottom: 5,
           }}

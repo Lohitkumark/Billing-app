@@ -33,7 +33,7 @@ const Bills =(props) =>{
    }
 
    useEffect(()=>{
-        customers.data.map((ele)=>{
+        customers.data.find((ele)=>{
             //   console.log(ele);
             if(customer == ele._id){
                 setCName(ele.name)
